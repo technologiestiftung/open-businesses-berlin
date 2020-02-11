@@ -1,6 +1,6 @@
-import { createStore } from 'easy-peasy';
+import { createStore } from "easy-peasy";
 
-import StoreModel from './models';
+import StoreModel from "./models";
 
 const Store = createStore(StoreModel);
 
