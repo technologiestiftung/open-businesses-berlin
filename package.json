@@ -19,8 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier",
-    "prettier:write":"prettier --write ./src/**/*",
-    "prettier:list":"prettier --list-different ./src/**/*"
+    "prettier:write": "prettier --write ./src/**/*",
+    "prettier:list": "prettier --list-different ./src/**/*"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -6,21 +6,21 @@ export default createGlobalStyle`
 
   @font-face {
       font-family: "Clan Bold";
-      src: url("../../public/fonts/clanot-bold-webfont.woff") format("woff");
+      src: url("../../fonts/clanot-bold-webfont.woff") format("woff");
       font-weight: 800;
       font-style: normal;
   }
 
   @font-face {
       font-family: "Clan Medium";
-      src: url("../../public/fonts/clanot-medium-webfont.woff") format("woff");
+      src: url("../../fonts/clanot-medium-webfont.woff") format("woff");
       font-weight: 600;
       font-style: normal;
   }
 
   @font-face {
       font-family: "Clan Book";
-      src: url("../../public/fonts/clanot-book-webfont.woff") format("woff");
+      src: url("../../fonts/clanot-book-webfont.woff") format("woff");
       font-weight: 400;
       font-style: normal;
   }
