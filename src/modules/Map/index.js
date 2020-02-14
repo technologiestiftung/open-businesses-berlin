@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { withRouter, Route } from 'react-router-dom';
 
 import FilterView from './Views/FilterView';
+import Tooltip from 'components/Tooltip';
 
 import c from 'config';
 
@@ -45,7 +46,7 @@ const Map = p => {
           exact path={['/', '/suche', '/liste', '/favoriten', '/info']} 
           component={() => <FilterView data={data}/>}
         />
-        {/* <Tooltip /> */}
+        <Tooltip />
       </MapGL>
     </MapWrapper>
   )
