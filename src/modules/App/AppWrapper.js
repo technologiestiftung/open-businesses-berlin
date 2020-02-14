@@ -16,7 +16,6 @@ const StyledWrapper = styled(Box)`
 `;
 
 const AppWrapper = () => {
-
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />

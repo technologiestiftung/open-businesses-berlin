@@ -1,5 +1,7 @@
 export default {
   map: {
+    mapCenter: [13.4124999, 52.5040961],
+    mapZoom: [10],
     config: {
       minZoom: 6,
       maxZoom: 17,
