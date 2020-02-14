@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 import Theme from 'styles/DefaultTheme';
 
 import Map from 'modules/Map';
+import LoadingOverlay from 'components/LoadingOverlay';
 
 const DynamicGlobalStyle = createGlobalStyle``;
 
@@ -21,7 +22,8 @@ const AppWrapper = () => {
       <GlobalStyle />
       <DynamicGlobalStyle />
       <StyledWrapper>
-        <Map/>
+        <LoadingOverlay loading={true} />
+        <Map />
       </StyledWrapper>
     </ThemeProvider>
   );
