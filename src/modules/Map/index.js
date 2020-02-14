@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactMapboxGl from 'react-mapbox-gl';
 import styled from 'styled-components';
-import { useStoreState } from 'easy-peasy';
+import { withRouter, Route } from 'react-router-dom';
+
+import FilterView from './Views/FilterView';
 
 import c from 'config';
 
@@ -20,26 +22,33 @@ const MapWrapper = styled.div`
 `;
 
 const Map = p => {
-  const mapCenter = useStoreState(state => state.mapCenter);
-  const mapZoom = useStoreState(state => state.mapZoom);
+  const {
+    mapCenter,
+    mapZoom,
+    style,
+    data
+  } = p;
+
   return (
     <MapWrapper>
       <MapGL
         zoom={mapZoom}
         center={mapCenter}
-        style={ process.env.REACT_APP_MAP_STYLE }
+        style={style}
         containerStyle={{ height: '100%', width: '100%' }}
         // onStyleLoad={map => this.onStyleLoad(map)}
         // onData={map => this.onData(map)}
         // onClick={(map, e) => {this.posArray(e)}}
         // flyToOptions={config.map.flyToOptions}
       >
-        {/* <Route exact path={['/', '/suche', '/liste', '/favoriten', '/info']} component={FilterView} />
-        <Tooltip />
-        <UIMap map={this.state.map}/> */}
+        <Route
+          exact path={['/', '/suche', '/liste', '/favoriten', '/info']} 
+          component={() => <FilterView data={data}/>}
+        />
+        {/* <Tooltip /> */}
       </MapGL>
     </MapWrapper>
   )
 }
 
-export default Map;
+export default withRouter(Map);

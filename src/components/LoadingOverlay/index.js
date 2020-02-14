@@ -12,7 +12,6 @@ const LoadingBackground = styled.div`
   display: ${p => p.loading ? 'block': 'none'};
   ${'' /* opacity: ${p => opacityFromState(p.state)}; */}
   ${'' /* display: ${p => (p.state == 'exited') ? 'none' : 'block'}; */}
-
 `;
 
 const SpinnerWrapper = styled.div`
@@ -37,9 +36,9 @@ const SpinnerWrapper = styled.div`
 // state={state}
 
 const LoadingOverlay = p => {
-  const { loading } = p;
+  const { isLoading } = p;
   return (
-    <LoadingBackground loading={loading}>
+    <LoadingBackground loading={isLoading}>
       <SpinnerWrapper>
         <span>Lade Daten ...</span>
       </SpinnerWrapper>

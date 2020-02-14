@@ -11,7 +11,7 @@ const DataModel = {
   }),
   loadData: thunk(async actions => {
     try {
-      const response = await fetch('public/data/data.json');
+      const response = await fetch('/data/data.geojson');
       const data = await response.json();
       actions.loadDataSuccess(data);
     } catch (_) {
