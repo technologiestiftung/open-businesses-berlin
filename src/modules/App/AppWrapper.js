@@ -1,10 +1,11 @@
 import React from 'react';
 import { Box } from 'rebass/styled-components';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
-// import { useStoreState, useStoreActions } from 'easy-peasy';
 import GlobalStyle from 'styles/GlobalStyle';
 import { withRouter } from 'react-router-dom';
 import Theme from 'styles/DefaultTheme';
+
+import Map from 'modules/Map';
 
 const DynamicGlobalStyle = createGlobalStyle``;
 
@@ -21,6 +22,7 @@ const AppWrapper = () => {
       <GlobalStyle />
       <DynamicGlobalStyle />
       <StyledWrapper>
+        <Map/>
       </StyledWrapper>
     </ThemeProvider>
   );
