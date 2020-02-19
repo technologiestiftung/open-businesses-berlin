@@ -9,8 +9,10 @@ const SidebarList = p => {
   const { data } = p;
   const setHighlightData = useStoreActions(actions => actions.setHighlightData);
   const highlightData = useStoreState(state => state.highlightData);
+  const selectedData = useStoreState(state => state.selectedData);
 
-  console.log(data)
+  console.log(selectedData, 'selectedData');
+
   return (
     <>
       { data && (

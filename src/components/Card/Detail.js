@@ -25,7 +25,7 @@ const DetailCard = p => {
   const { data } = p;
   return (
     <DetailCardWrapper>
-      <DetailHeader></DetailHeader>
+      <DetailHeader>{JSON.stringify(data)}</DetailHeader>
     </DetailCardWrapper>
   )
 }

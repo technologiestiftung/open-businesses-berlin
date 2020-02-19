@@ -42,7 +42,6 @@ const CardHeader = p => {
   return (
     <CardHeaderWrapper>
       { configTooltip.map((d,i) => {
-        console.log(d);
         return (
           <Fragment key={`key-cardheader-${i}`}>
             { d.component === 'title' && (
