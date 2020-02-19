@@ -5,6 +5,7 @@ import { withRouter, Route } from 'react-router-dom';
 
 import FilterView from './Views/FilterView';
 import Tooltip from 'components/Tooltip';
+import LogoTile from './LogoTile';
 
 import c from 'config';
 
@@ -47,6 +48,7 @@ const Map = p => {
           component={() => <FilterView data={data}/>}
         />
         <Tooltip />
+        <LogoTile />
       </MapGL>
     </MapWrapper>
   )
