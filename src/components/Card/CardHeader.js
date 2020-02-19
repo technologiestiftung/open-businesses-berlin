@@ -34,8 +34,7 @@ const CardHeaderWrapper = styled.div`
 `;
 
 const CardHeader = p => {
-  const { data } = p;
-  const type = 'white';
+  const { data, type } = p;
   return (
     <CardHeaderWrapper>
       <CardTitle type={type}>{data.name}</CardTitle>

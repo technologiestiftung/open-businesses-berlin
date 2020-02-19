@@ -18,6 +18,7 @@ const DataModel = {
       actions.loadDataFail();
     }
   }),
+  filteredData: computed(state => state.data)
 };
 
 export default DataModel;
