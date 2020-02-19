@@ -2,7 +2,9 @@ import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { createMarkup } from 'utils';
 
-const CardAddress = styled.div`
+import c from 'config';
+
+const CardDescription = styled.div`
   font-size: 12px;
   line-height: 150%;
   color: ${props => props.type}
@@ -22,7 +24,7 @@ const CardHeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${CardAddress} {
+  ${CardDescription} {
     color: ${props => props.type}
   }
 
@@ -35,10 +37,28 @@ const CardHeaderWrapper = styled.div`
 
 const CardHeader = p => {
   const { data, type } = p;
+  const configTooltip = c.tooltip;
+
   return (
     <CardHeaderWrapper>
-      <CardTitle type={type}>{data.name}</CardTitle>
-      <CardAddress dangerouslySetInnerHTML={createMarkup(data.name)} type={type}></CardAddress>
+      { configTooltip.map((d,i) => {
+        console.log(d);
+        return (
+          <Fragment key={`key-cardheader-${i}`}>
+            { d.component === 'title' && (
+              <CardTitle 
+                type={type}
+              >
+                {data[d.id]}
+              </CardTitle>) }
+            { d.component === 'description' && (
+              <CardDescription 
+                dangerouslySetInnerHTML={createMarkup(data[d.id])} 
+                type={type}>
+              </CardDescription>) }
+          </Fragment>
+        )
+      }) }
     </CardHeaderWrapper>
   )
 }

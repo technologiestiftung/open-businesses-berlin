@@ -8,6 +8,11 @@ REACT_APP_MAP_STYLE={{MAPBOX_STYLE_URL}}
 NODE_PATH=src/
 ```
 
+Available Content types:
+
+- title
+- paragraph
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

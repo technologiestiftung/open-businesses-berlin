@@ -1,12 +1,16 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
+import { useStoreActions, useStoreState } from 'easy-peasy';
 
 import SidebarTitle from '../SidebarTitle';
 import CardCompact from 'components/Card/CardCompact';
 
 const SidebarList = p => {
   const { data } = p;
-  console.log(data);
+  const setHighlightData = useStoreActions(actions => actions.setHighlightData);
+  const highlightData = useStoreState(state => state.highlightData);
+
+  console.log(data)
   return (
     <>
       { data && (
@@ -17,8 +21,8 @@ const SidebarList = p => {
             <CardCompact
               key={`item-${i}`}
               data={d.properties}
-              // onMouseEnter={() => setHighlightData(d)}
-              // onMouseLeave={() => setHighlightData(false)}
+              onMouseEnter={() => setHighlightData(d.properties)}
+              onMouseLeave={() => setHighlightData(false)}
             />
           )
         }) }

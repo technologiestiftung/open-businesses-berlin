@@ -8,6 +8,7 @@ import { useStoreState } from 'easy-peasy';
 
 import Map from 'modules/Map';
 import Sidebar from 'modules/Sidebar';
+import Nav from 'components/Nav';
 import LoadingOverlay from 'components/LoadingOverlay';
 
 const DynamicGlobalStyle = createGlobalStyle``;
@@ -32,6 +33,7 @@ const AppWrapper = () => {
       <StyledWrapper>
         <LoadingOverlay loading={isLoading} />
         <Sidebar />
+        <Nav />
         { data && (
           <Map
             data={data}

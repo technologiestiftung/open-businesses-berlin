@@ -18,46 +18,53 @@ export default {
   meta: {
     title: 'Map title here!'
   },
-  properties: [
+  tooltip: [
     {
-      id: 'id',
-      type: 'string'
-    },
-    {
-      id: 'art_einrichtung',
-      type: 'string'
-    },
-    {
-      id: 'bezeichnung',
-      type: 'string'
-    },
-    {
-      id: 'traeger',
-      type: 'string'
+      id: 'name',
+      component: 'title',
+      label: 'Institution'
     },
     {
       id: 'art_angebot',
-      type: 'string'
+      component: 'description',
+      label: 'Angebot'
     },
     {
-      id: 'link',
-      type: 'link'
+      id: 'bezeichnung',
+      component: 'description',
+      label: 'Bezeichnung'
+    },
+  ],
+  detail: [
+    {
+      id: 'name',
+      component: 'title',
+      label: 'Institution'
     },
     {
-      id: 'telefon',
-      type: 'link'
+      id: 'art_angebot',
+      component: 'description',
+      label: 'Angebot'
+    },
+    {
+      id: 'bezeichnung',
+      component: 'description',
+      label: 'Bezeichnung'
+    },
+    {
+      id: 'email',
+      component: 'title',
+      label: 'E-Mail'
     },
     {
       id: 'adresse',
-      type: 'string'
+      component: 'description',
+      label: 'Adresse'
     },
     {
-      id: 'bezirksregion',
-      type: 'string'
-    },
-    {
-      id: 'angebote',
-      type: 'filter_array'
+      id: 'strasse',
+      component: 'description',
+      label: 'Straße'
     },
   ]
 }

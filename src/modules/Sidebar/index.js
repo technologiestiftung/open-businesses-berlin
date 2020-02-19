@@ -28,17 +28,19 @@ const SidebarContent = styled.div`
 `;
 
 const Sidebar = p => {
-  const data = useStoreState(state => state.filteredData);
+  const data = useStoreState(state => state.enrichedData);
+  console.log(p.history.location);
   return (
       <Route
-        path={['/liste', '/filter']}
+        path={['/liste']}
         children={({ match }) => {
+          console.log(match);
           return (
             <SidebarWrapper isVisible={match}>
               <SidebarClose />
               <SidebarContent>
                 <Switch>
-                  <Route path="/liste" component={() =><SidebarList data={data}/>}/>
+                  { data && (<Route path="/liste" component={() =><SidebarList data={data}/>}/>)}
                 </Switch>
               </SidebarContent>
             </SidebarWrapper>
