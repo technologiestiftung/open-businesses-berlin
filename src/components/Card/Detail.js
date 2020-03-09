@@ -1,18 +1,18 @@
-import React, { PureComponent } from 'react';
-import styled from 'styled-components';
-import { connect } from 'unistore/react';
+import React, { PureComponent } from "react";
+import styled from "styled-components";
+import { connect } from "unistore/react";
 
 const DetailTitle = styled(SidebarTitle)`
-  margin-bottom: ${props => props.theme.padding[1]};
-  padding-right: ${props => props.theme.padding[0]};
+  margin-bottom: ${(props) => props.theme.padding[1]};
+  padding-right: ${(props) => props.theme.padding[0]};
   padding-left: 0;
 `;
 
 const DetailCardWrapper = styled(CardWrapper)`
   display: block;
   flex-direction: column;
-  padding-top: ${props => props.theme.padding[0]};
-  padding-left: ${props => props.theme.padding[1]};
+  padding-top: ${(props) => props.theme.padding[0]};
+  padding-left: ${(props) => props.theme.padding[1]};
 `;
 
 const DetailHeader = styled.div`
@@ -21,11 +21,11 @@ const DetailHeader = styled.div`
   flex-direction: row;
 `;
 
-const DetailCard = p => {
+const DetailCard = (p) => {
   const { data } = p;
   return (
     <DetailCardWrapper>
       <DetailHeader>{JSON.stringify(data)}</DetailHeader>
     </DetailCardWrapper>
-  )
-}
+  );
+};

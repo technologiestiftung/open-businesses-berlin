@@ -1,7 +1,7 @@
-import React, { PureComponent, Fragment } from 'react';
-import styled from 'styled-components';
+import React, { PureComponent, Fragment } from "react";
+import styled from "styled-components";
 
-import TSBLogo from 'components/TSBLogo';
+import TSBLogo from "components/TSBLogo";
 
 const StyledLogoTile = styled.div`
   position: absolute;
@@ -10,8 +10,8 @@ const StyledLogoTile = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 1000;
-  font-size: ${props => props.theme.fontSizes[0]};
-  font-family: ${props => props.theme.fonts.sansMedium};
+  font-size: ${(props) => props.theme.fontSizes[0]};
+  font-family: ${(props) => props.theme.fonts.sansMedium};
 
   @media (max-width: 768px) {
     top: auto;
@@ -26,15 +26,14 @@ const StyledTSBLogo = styled(TSBLogo)`
 `;
 
 class LogoTile extends PureComponent {
-
   render() {
-      return (
-        <StyledLogoTile>
-          Ein Projekt der:
-          <StyledTSBLogo />
-        </StyledLogoTile>
-      );
+    return (
+      <StyledLogoTile>
+        Ein Projekt der:
+        <StyledTSBLogo />
+      </StyledLogoTile>
+    );
   }
 }
 
-export default LogoTile
+export default LogoTile;

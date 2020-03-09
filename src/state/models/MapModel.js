@@ -1,5 +1,5 @@
-import { action } from 'easy-peasy';
-import c from 'config';
+import { action } from "easy-peasy";
+import c from "config";
 
 const MapModel = {
   mapCenter: c.map.mapCenter,

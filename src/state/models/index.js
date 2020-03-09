@@ -1,6 +1,6 @@
-import MapModel from './MapModel';
-import DataModel from './DataModel';
-import TooltipModel from './TooltipModel';
+import MapModel from "./MapModel";
+import DataModel from "./DataModel";
+import TooltipModel from "./TooltipModel";
 
 export default {
   ...MapModel,

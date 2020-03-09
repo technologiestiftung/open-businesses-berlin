@@ -9,62 +9,62 @@ export default {
       bearing: 0,
       maxBounds: [
         [10, 50],
-        [15, 54]
+        [15, 54],
       ],
       accessToken: process.env.REACT_APP_MAP_TOKEN,
       style: process.env.REACT_APP_MAP_STYLE,
-    }
+    },
   },
   meta: {
-    title: 'Map title here!'
+    title: "Map title here!",
   },
   tooltip: [
     {
-      id: 'name',
-      component: 'title',
-      label: 'Institution'
+      id: "name",
+      component: "title",
+      label: "Institution",
     },
     {
-      id: 'art_angebot',
-      component: 'description',
-      label: 'Angebot'
+      id: "art_angebot",
+      component: "description",
+      label: "Angebot",
     },
     {
-      id: 'bezeichnung',
-      component: 'description',
-      label: 'Bezeichnung'
+      id: "bezeichnung",
+      component: "description",
+      label: "Bezeichnung",
     },
   ],
   detail: [
     {
-      id: 'name',
-      component: 'title',
-      label: 'Institution'
+      id: "name",
+      component: "title",
+      label: "Institution",
     },
     {
-      id: 'art_angebot',
-      component: 'description',
-      label: 'Angebot'
+      id: "art_angebot",
+      component: "description",
+      label: "Angebot",
     },
     {
-      id: 'bezeichnung',
-      component: 'description',
-      label: 'Bezeichnung'
+      id: "bezeichnung",
+      component: "description",
+      label: "Bezeichnung",
     },
     {
-      id: 'email',
-      component: 'title',
-      label: 'E-Mail'
+      id: "email",
+      component: "title",
+      label: "E-Mail",
     },
     {
-      id: 'adresse',
-      component: 'description',
-      label: 'Adresse'
+      id: "adresse",
+      component: "description",
+      label: "Adresse",
     },
     {
-      id: 'strasse',
-      component: 'description',
-      label: 'Straße'
+      id: "strasse",
+      component: "description",
+      label: "Straße",
     },
-  ]
-}
+  ],
+};

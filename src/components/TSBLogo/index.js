@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import TSBLogoSrc from 'assets/images/tsb-logo-coloured.svg'; // eslint-disable-line
+import React from "react";
+import styled from "styled-components";
+import TSBLogoSrc from "assets/images/tsb-logo-coloured.svg"; // eslint-disable-line
 
 const TSBLogo = styled.a.attrs({
-    href: 'https://technologiestiftung-berlin.de',
-    target: '_blank'
-  })`
-  padding-top: ${props => props.theme.padding[1]};
+  href: "https://technologiestiftung-berlin.de",
+  target: "_blank",
+})`
+  padding-top: ${(props) => props.theme.padding[1]};
 
   img {
     width: 150px;

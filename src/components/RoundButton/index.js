@@ -1,11 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export default styled.button`
-  width: ${props => props.size || 36}px;
-  height: ${props => props.size || 36}px;
-  background-color: ${props => (props.isActive ? props.theme.colors.primary : '#000')};
+  width: ${(props) => props.size || 36}px;
+  height: ${(props) => props.size || 36}px;
+  background-color: ${(props) =>
+    props.isActive ? props.theme.colors.primary : "#000"};
   color: white;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
   will-change: background-color;
   border-radius: 50%;
   display: flex;
@@ -20,6 +21,6 @@ export default styled.button`
   box-sizing: border-box;
 
   &:hover {
-    background-color: ${props => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.primary};
   }
 `;
