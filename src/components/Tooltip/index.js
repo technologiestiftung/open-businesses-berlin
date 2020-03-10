@@ -9,7 +9,6 @@ const StyledPopup = styled(Popup)`
   &&& {
     max-width: 250px;
     line-height: 1;
-    font-family: ${(props) => props.theme.fonts.sans};
 
     .mapboxgl-popup-content {
       background: black;

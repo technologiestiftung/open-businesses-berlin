@@ -20,7 +20,7 @@ const SidebarList = (p) => {
   return (
     <>
       <SidebarTitle>
-        {ResultsTitle(data)}
+        { ResultsTitle(data) }
       </SidebarTitle> 
       { data && data.features.map((d, i) => {
         return (

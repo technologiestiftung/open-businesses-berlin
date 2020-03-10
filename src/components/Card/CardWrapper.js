@@ -6,7 +6,7 @@ const CardWrapper = styled.div`
   border-radius: ${(props) => props.theme.borderRadius};
   max-height: 75vh;
   display: block;
-  padding: ${(props) => props.theme.padding[1]};
+  padding: 10px;
 `;
 
 export default CardWrapper;

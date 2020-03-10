@@ -10,8 +10,7 @@ const StyledLogoTile = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 1000;
-  font-size: ${(props) => props.theme.fontSizes[0]};
-  font-family: ${(props) => props.theme.fonts.sansMedium};
+  font-size: 12px;
 
   @media (max-width: 768px) {
     top: auto;

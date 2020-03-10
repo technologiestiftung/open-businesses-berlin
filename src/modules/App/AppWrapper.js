@@ -1,10 +1,12 @@
 import React from "react";
 import { Box } from "rebass/styled-components";
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import { ThemeProvider } from 'theme-ui'
 import GlobalStyle from "styles/GlobalStyle";
 import { withRouter, Route } from "react-router-dom";
-import Theme from "styles/DefaultTheme";
+import Theme from "styles/Theme";
 import { useStoreState } from "easy-peasy";
+
 
 import Map from "modules/Map";
 import Sidebar from "modules/Sidebar";

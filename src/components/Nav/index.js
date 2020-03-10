@@ -14,7 +14,7 @@ const NavWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  box-shadow: ${(props) => props.theme.boxShadow};
+  box-shadow: 0 2px 40px 0 rgba(30,55,145,0.15);
   flex-grow: 0;
   position: absolute;
   top: 15px;
@@ -24,7 +24,7 @@ const NavWrapper = styled.div`
   ${media.m`
     transform: ${(props) =>
       props.isNavOpen ? "translate3d(375px, 0, 0)" : "none"};
-    transition: transform 500ms;
+    transition: transform 375ms;
   `}
 `;
 

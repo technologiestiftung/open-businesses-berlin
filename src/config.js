@@ -28,12 +28,7 @@ export default {
       id: "art_angebot",
       component: "description",
       label: "Angebot",
-    },
-    {
-      id: "bezeichnung",
-      component: "description",
-      label: "Bezeichnung",
-    },
+    }
   ],
   detail: [
     {
@@ -53,18 +48,13 @@ export default {
     },
     {
       id: "email",
-      component: "title",
+      component: "link",
       label: "E-Mail",
     },
     {
       id: "adresse",
       component: "description",
       label: "Adresse",
-    },
-    {
-      id: "strasse",
-      component: "description",
-      label: "Straße",
     },
   ],
 };

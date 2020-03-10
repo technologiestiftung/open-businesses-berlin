@@ -5,17 +5,18 @@ import CardWrapper from "./CardWrapper";
 import CardHeader from "./CardHeader";
 
 const StyledCardWrapper = styled(CardWrapper)`
-  margin-bottom: ${(props) => props.theme.margin[0]};
-  padding: ${(props) => props.theme.padding[0]};
-  padding-bottom: ${(props) => props.theme.margin[0]};
+  margin-bottom: 10px;
+  padding: 5px;
+  padding-bottom: 10px;
   cursor: pointer;
-  border-bottom: 2px solid ${(props) => props.theme.colors.lightgrey};
+  border-width: 1px solid;
+  border-bottom: grey;
   border-radius: 0;
   will-change: border-color, transform;
   transition: border-color 0.2s, transform 0.2s;
 
   &:hover {
-    border-color: ${(props) => props.theme.colors.midgrey};
+    border-color: black;
     transform: translateX(5px);
   }
 `;
@@ -25,7 +26,10 @@ const CardCompact = (p) => {
 
   return (
     <StyledCardWrapper>
-      <CardHeader data={data} />
+      <CardHeader 
+        hasBorder={true} 
+        data={data} 
+      />
     </StyledCardWrapper>
   );
 };
