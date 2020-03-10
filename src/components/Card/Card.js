@@ -35,6 +35,7 @@ export default p => {
           case 'link':
             return (
               <CardLink
+                isMail={true}
                 label={block.label}
                 content={data.properties[block.id]}
                 url={data.properties[block.id]}

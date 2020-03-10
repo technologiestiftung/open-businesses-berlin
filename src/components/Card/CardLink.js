@@ -4,7 +4,8 @@ import CardLabel from './CardLabel';
 import React, { Fragment } from 'react';
 
 export default p => {
-  const { url, content, label } = p;
+  const { url, content, label, isMail } = p;
+  const directTo = isMail ? `mailto:${url}` : url;
   return (
     <div
         {...p}
@@ -19,7 +20,7 @@ export default p => {
     >
       <CardLabel>{label}</CardLabel>
       <a
-        href={url}
+        href={directTo}
         target="_blank"
         sx={{
           fontFamily: 'heading',
