@@ -8,6 +8,7 @@ const StyledLogoTile = styled.div`
   top: 25px;
   right: 25px;
   display: flex;
+  font-family: 'Clan Book';
   flex-direction: column;
   z-index: 1000;
   font-size: 12px;

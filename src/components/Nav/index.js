@@ -5,7 +5,7 @@ import { useStoreActions } from 'easy-peasy';
 
 import ListIcon from "@material-ui/icons/List";
 import InfoIcon from "@material-ui/icons/InfoOutlined";
-// import SearchIcon from "@material-ui/icons/Search";
+import SearchIcon from "@material-ui/icons/Search";
 
 import EdgeButton from "components/EdgeButton";
 import { media } from "styles/Utils";
@@ -40,6 +40,7 @@ const NavItem = styled(NavLink)`
 const navConfig = [
   { path: "/liste", title: "Listenansicht", icon: <ListIcon /> },
   { path: "/info", title: "Über das Projekt", icon: <InfoIcon /> },
+  { path: "/filter", title: "Suche und Filter", icon: <SearchIcon /> },
 ];
 
 const Nav = (p) => {

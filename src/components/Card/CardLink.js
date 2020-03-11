@@ -9,11 +9,11 @@ export default p => {
     <div
         {...p}
         sx={{
-          fontSize: [1,2],
+          fontSize: [1],
           color: ['black'],
           lineHeight: ['heading'],
           fontFamily: 'body',
-          paddingBottom: [2,3,4]
+          paddingBottom: [3,4]
         }}
     >
       <CardLabel>{label}</CardLabel>
@@ -24,6 +24,7 @@ export default p => {
         sx={{
           fontFamily: 'heading',
           pb: 0,
+          fontSize: 2,
           borderBottom: theme => theme.borderLink,
           transition: theme => theme.transitions[0],
           lineHeight: 'body',

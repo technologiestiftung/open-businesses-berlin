@@ -6,7 +6,7 @@ export default p => {
     <div
       {...p}
       sx={{
-        fontSize: [0,1],
+        fontSize: [1],
         color: ['white'],
         lineHeight: ['heading'],
         fontFamily: 'body',
@@ -15,6 +15,7 @@ export default p => {
         height: 'fit-content',
         background: 'black',
         marginRight: 1,
+        lineHeight: 'body',
         marginBottom: 1,
         width: 'fit-content',
         borderRadius: '14px',

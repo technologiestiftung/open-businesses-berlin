@@ -15,7 +15,7 @@ export default p => {
           color: ['black'],
           lineHeight: ['heading'],
           fontFamily: 'body',
-          paddingBottom: [2,3,4]
+          paddingBottom: [3,4]
         }}
     >
       <CardLabel>{label}</CardLabel>

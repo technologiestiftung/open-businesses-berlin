@@ -16,7 +16,7 @@ export default p => {
         fontFamily: ['heading'],
         lineHeight: ['heading'],
         color: fontColor,
-        paddingBottom: [2,3],
+        paddingBottom: [3,4],
         transition: theme => theme.transitions[0],
       }}
     >
