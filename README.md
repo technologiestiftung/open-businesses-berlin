@@ -14,6 +14,7 @@ NODE_PATH=src/
 
 ### detail
 > The detail section represents the cards for individual selected points on the sidebar.
+
 id: This should be the name of the to be avaiable key inside the properties section of each feature inside your geojson.
 component: This defines which React component is responsible to render the data of the ```id``` key. Have a look at the set of components that is currently available.
 label: This content defines what label should be displayed above the data.
