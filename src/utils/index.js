@@ -4,7 +4,6 @@ export const createMarkup = (content) => {
 
 export const id = () => {
   return (
-    "_" +
     Math.random()
       .toString(36)
       .substr(2, 9)

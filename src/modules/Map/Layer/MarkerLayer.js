@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Layer, Feature } from "react-mapbox-gl";
-import { useStoreActions } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
 
 import history from '../../../history';
 
@@ -14,10 +14,9 @@ const paintProps = {
 
 const MarkerLayer = (p) => {
   const { data } = p;
-// const data = useStoreState(state => state.data);
-
   const setTooltipPos = useStoreActions((actions) => actions.setTooltipPos);
   const setTooltipData = useStoreActions((actions) => actions.setTooltipData);
+  const setHighlightData = useStoreActions(a => a.setHighlightData);
 
   const handleMouseEnter = (evt, { properties = {} }) => {
     evt.map.getCanvas().style.cursor = "pointer";
@@ -29,11 +28,13 @@ const MarkerLayer = (p) => {
     setTooltipData(null);
   };
 
-  const handleClick = (evt, { properties }) => {
+  const handleClick = (evt, data) => {
     evt.originalEvent.preventDefault();
     evt.originalEvent.stopPropagation();
 
-    const nextLocation = `/liste/${properties.autoid}`;
+    setHighlightData(data);
+
+    const nextLocation = `/liste/${data.properties.autoid}`;
     history.push(nextLocation);
   };
 

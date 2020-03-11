@@ -7,5 +7,5 @@ export default styled.div`
   margin-bottom: 25px;
   padding-top: 5px;
   line-height: 130%;
-  padding-right: 45px;
+  padding-right: 100px;
 `;

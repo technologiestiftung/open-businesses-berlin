@@ -1,5 +1,4 @@
 import React from "react";
-import { useStoreActions } from "easy-peasy";
 
 import SidebarTitle from "../SidebarTitle";
 import CardCompact from "components/Card/CardCompact";
@@ -10,9 +9,6 @@ const ResultsTitle = (data) => {
 
 const SidebarList = (p) => {
   const { data } = p;
-  const setHighlightData = useStoreActions(
-    (actions) => actions.setHighlightData,
-  );
   return (
     <>
       <SidebarTitle>
@@ -22,9 +18,7 @@ const SidebarList = (p) => {
         return (
           <CardCompact
             key={`item-${i}`}
-            data={d.properties}
-            onMouseEnter={() => setHighlightData(d.properties)}
-            onMouseLeave={() => setHighlightData(false)}
+            data={d}
           />
         );
       }) }

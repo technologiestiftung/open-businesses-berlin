@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink, withRouter, matchPath } from "react-router-dom";
+import { useStoreActions } from 'easy-peasy';
 
 import ListIcon from "@material-ui/icons/List";
 import InfoIcon from "@material-ui/icons/InfoOutlined";
@@ -44,6 +45,7 @@ const navConfig = [
 const Nav = (p) => {
   const { location } = p;
   const { pathname } = location;
+  const setHighlightData = useStoreActions(a => a.setHighlightData);
 
   const isNavOpen =
     matchPath(pathname, {
@@ -57,6 +59,7 @@ const Nav = (p) => {
           exact
           to={{ pathname: m.path, search: "" }}
           key={m.path}
+          onClick={() => setHighlightData(false)}
         >
           <EdgeButton
             title={m.title}

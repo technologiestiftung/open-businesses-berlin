@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Route, withRouter, Switch } from "react-router-dom";
 
@@ -14,20 +14,14 @@ const SidebarContent = styled.div`
   padding: 20px 15px;
 `;
 
-const filterById = (geojson, id) => {
-  if (geojson) {
-    return geojson.features.find(feat => feat.properties.autoid === id);
-  }
-};
+const filterById = (geojson, id) => geojson ? geojson.features.find(feat => feat.properties.autoid === id) : false;
 
 const Sidebar = (p) => {
   const { data, match, location} = p;
   const { pathname } = location;
-
-  const isVisible = pathname   !== '/';
+  const isVisible = pathname !== '/';
   const id = match.params.itemId;
-
-  const selectedItem = filterById(data,id);
+  let selectedItem = filterById(data,id);
 
   return (
     <SidebarWrapper isvisible={isVisible.toString()}>

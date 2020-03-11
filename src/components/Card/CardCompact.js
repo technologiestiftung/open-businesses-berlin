@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useStoreActions } from 'easy-peasy';
+import history from '../../history';
 
 import CardWrapper from "./CardWrapper";
 import CardHeader from "./CardHeader";
@@ -23,12 +25,24 @@ const StyledCardWrapper = styled(CardWrapper)`
 
 const CardCompact = (p) => {
   const { data } = p;
+  const { properties } = data;
+  const setHighlightData = useStoreActions(a => a.setHighlightData);
+  const setMapCenter = useStoreActions(a => a.setMapCenter);
+
+  const handleClick = (evt, data) => {
+    const { properties } = data;
+    const nextLocation = `/liste/${properties.autoid}`;
+    setHighlightData(data);
+    history.push(nextLocation);
+  };
 
   return (
-    <StyledCardWrapper>
-      <CardHeader 
-        hasBorder={true} 
-        data={data} 
+    <StyledCardWrapper
+      onClick={(evt) => handleClick(evt, data)}
+    >
+      <CardHeader
+        hasBorder={true}
+        data={properties}
       />
     </StyledCardWrapper>
   );

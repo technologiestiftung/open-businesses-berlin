@@ -24,8 +24,9 @@ export default p => {
         sx={{
           fontFamily: 'heading',
           pb: 0,
-          borderBottom: theme => theme.linkDecoration,
+          borderBottom: theme => theme.borderLink,
           transition: theme => theme.transitions[0],
+          lineHeight: 'body',
           textDecoration: 'none',
           color: 'text',
           '&:hover': {
