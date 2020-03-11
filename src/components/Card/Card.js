@@ -1,16 +1,14 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import React, { Fragment } from 'react';
 import c from "config";
+import React from 'react';
 
 import CardTitle from './CardTitle';
 import CardLink from './CardLink';
 import CardDescription from './CardDescription';
 
-const LoadingData = () => 'Lade Daten ...';
-
 export default p => {
-  const { data, match } = p;
+  const { data } = p;
   return (
     <>
     {data && (
@@ -20,31 +18,30 @@ export default p => {
           case 'title':
             return (
               <CardTitle
+                key={`card-title-key-${i}`}
                 size="responsive"
-              >{data.properties[block.id]}</CardTitle>
+              >{ data.properties[block.id] }</CardTitle>
             )
-            break;
           case 'description':
             return (
               <CardDescription
+                key={`card-desc-key-${i}`}
                 label={block.label}
                 content={data.properties[block.id]}
               />
             )
-            break;
           case 'link':
             return (
               <CardLink
-                isMail={true}
+                ismail="true"
+                key={`card-link-key-${i}`}
                 label={block.label}
                 content={data.properties[block.id]}
                 url={data.properties[block.id]}
               />
             )
-            break;
           default:
             return null;
-            // code block
         }
       }) }
       </>

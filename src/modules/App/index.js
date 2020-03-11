@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Router, Route, Redirect, Switch } from "react-router-dom";
 import AppWrapper from "./AppWrapper";
-import { useStoreActions, useStoreState } from "easy-peasy";
+import { useStoreActions } from "easy-peasy";
 
 import history from '../../history';
 
@@ -12,7 +12,8 @@ const App = (p) => {
 
   useEffect(() => {
     loadData();
-  }, []);
+    console.log('loading data')
+  });
 
   return (
     <Router history={history}>

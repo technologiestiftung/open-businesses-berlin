@@ -1,25 +1,34 @@
-import styled from "styled-components";
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
+import React from 'react';
 
-export default styled.button`
-  width: ${(props) => props.size || 36}px;
-  height: ${(props) => props.size || 36}px;
-  background-color: black;
-  color: white;
-  transition: background-color 0.3s;
-  will-change: background-color;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: none;
-  outline: none;
-  border: none;
-  flex-shrink: 0;
-  flex-grow: 0;
-  box-sizing: border-box;
-
-  &:hover {
-    background-color: black;
-  }
-`;
+export default p => {
+  const { children } = p;
+  return (
+    <button
+      sx={{
+        width: [3],
+        height: [3],
+        borderRadius: '100px',
+        backgroundColor: 'text',
+        cursor: 'pointer',
+        border: 'none',
+        outline: '0',
+        transition: theme => theme.transitions[0],
+        '&:hover': {
+          backgroundColor: 'textgrey'
+        },
+        '& > svg': { 
+          fill: 'background',
+          transform: 'translateY(1px)',
+        }
+      }}
+    >
+      {
+        React.Children.map(children, child => {
+          return React.cloneElement(child);
+        })
+      }
+    </button>
+  )
+}

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, useThemeUI } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { Fragment } from 'react';
 import styled from "styled-components";
 import { createMarkup } from "utils";
@@ -13,19 +13,9 @@ const CardDescription = styled.div`
   color: ${(props) => props.type};
 `;
 
-const CardHeaderWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  ${CardDescription} {
-    color: ${(props) => props.type};
-  }
-`;
-
 export default p => {
   const { data, type, hasBorder } = p;
   const configTooltip = c.tooltip;
-  const t = useThemeUI();
 
   const border = hasBorder ? '1px solid' : '0px solid';
 
@@ -47,12 +37,12 @@ export default p => {
             {d.component === "title" && (
               <CardTitle type={type}>{data[d.id]}</CardTitle>
             )}
-            {d.component === "description" && (
+            { d.component === "description" && (
               <CardDescription
                 dangerouslySetInnerHTML={createMarkup(data[d.id])}
                 type={type}
               ></CardDescription>
-            )}
+            ) }
           </Fragment>
         );
       })}

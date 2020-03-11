@@ -1,11 +1,10 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import styled from "styled-components";
 import { NavLink, withRouter, matchPath } from "react-router-dom";
 
 import ListIcon from "@material-ui/icons/List";
 import InfoIcon from "@material-ui/icons/InfoOutlined";
-import FavIcon from "@material-ui/icons/FavoriteBorderOutlined";
-import SearchIcon from "@material-ui/icons/Search";
+// import SearchIcon from "@material-ui/icons/Search";
 
 import EdgeButton from "components/EdgeButton";
 import { media } from "styles/Utils";
@@ -39,6 +38,7 @@ const NavItem = styled(NavLink)`
 
 const navConfig = [
   { path: "/liste", title: "Listenansicht", icon: <ListIcon /> },
+  { path: "/info", title: "Über das Projekt", icon: <InfoIcon /> },
 ];
 
 const Nav = (p) => {
@@ -56,7 +56,6 @@ const Nav = (p) => {
         <NavItem
           exact
           to={{ pathname: m.path, search: "" }}
-          // onClick={() => (this.handleClick(m.title))}
           key={m.path}
         >
           <EdgeButton

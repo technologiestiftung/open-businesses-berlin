@@ -28,7 +28,7 @@ const DataModel = {
     }
   }),
   filteredData: computed((state) => state.data),
-  setHighlightData: action((state, payload) => (state.highlightData = payload)),
+  setHighlightData: action((state, payload) => {state.highlightData = payload}),
   setSelectedData: action((state, payload) => (state.selectedData = payload)),
 };
 

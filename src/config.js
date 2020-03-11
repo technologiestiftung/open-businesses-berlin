@@ -1,4 +1,6 @@
 export default {
+  socialTags: {
+  },
   map: {
     mapCenter: [13.4124999, 52.5040961],
     mapZoom: [10],
@@ -17,6 +19,19 @@ export default {
   },
   meta: {
     title: "Map title here!",
+  },
+  about: {
+    title: "Name des Projekts hier",
+    paragraphs: [
+      {
+        title: "Subheadline hier",
+        content: "Lorem ipsum [dolorem](https://www.google.de) est. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      },
+      {
+        title: "Subheadline hier",
+        content: "Lorem ipsum [dolorem](https://www.google.de) est. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      },
+    ]
   },
   tooltip: [
     {

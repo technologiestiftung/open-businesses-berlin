@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Popup } from "react-mapbox-gl";
 import { useStoreState } from "easy-peasy";

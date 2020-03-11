@@ -34,7 +34,7 @@ const AppWrapper = () => {
       <DynamicGlobalStyle />
       <StyledWrapper>
         <LoadingOverlay loading={isLoading} />
-        <Route path={['/liste/:itemId','/liste', '/']} render={() => <Sidebar data={data} />} />
+        <Route path={['/liste/:itemId','/liste', '/', '/info']} render={() => <Sidebar data={data} />} />
         <Nav />
         <Map
           data={data}

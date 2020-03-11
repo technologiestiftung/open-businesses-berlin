@@ -2,7 +2,6 @@ import React from "react";
 import ReactMapboxGl from "react-mapbox-gl";
 import styled from "styled-components";
 import { withRouter, Route } from "react-router-dom";
-import { useStoreState } from "easy-peasy";
 
 import MarkerLayer from "./Layer/MarkerLayer";
 import Tooltip from "components/Tooltip";

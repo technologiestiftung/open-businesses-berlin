@@ -2,9 +2,11 @@
 export default {
   boxShadow: `0 2px 40px 0 rgba(30,55,145,0.15)`,
   transitions: ['.125s all ease-in-out', '.250s all ease-in-out', '.375s all ease-in-out', '.5s all ease-in-out'],
+  borderLink: '1px solid black',
   // sx properties:
   breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 12, 16, 32, 64, 128, 256, 512],
+  sizes: [10, 20, 30, 40, 50, 60],
   fonts: {
     body: 'Clan Book',
     heading: 'Clan Bold',
@@ -27,7 +29,7 @@ export default {
     muted: '#f6f6f6',
     lightgrey: "#f5f5f5",
     midgrey: "#d8d8d8",
-    textgrey: "#777",
+    textgrey: "#343434",
   },
   text: {
     heading: {

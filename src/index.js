@@ -10,7 +10,9 @@ import App from "modules/App";
 window.$config = config; //define global config variable
 ReactDOM.render(
   <StoreProvider store={Store}>
-    <App />
+    <>
+      <App />
+    </>
   </StoreProvider>,
   document.getElementById("root"),
 );

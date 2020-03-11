@@ -1,8 +1,8 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Route, withRouter, Switch } from "react-router-dom";
-import { useStoreState } from "easy-peasy";
 
+import SidebarInfo from "./SidebarInfo/";
 import SidebarList from "./SidebarList/";
 import SidebarClose from "./SidebarClose/";
 import Card from "components/Card/Card";
@@ -21,15 +21,16 @@ const filterById = (geojson, id) => {
 };
 
 const Sidebar = (p) => {
-  const { data, match} = p;
+  const { data, match, location} = p;
+  const { pathname } = location;
 
-  const isVisible = match.path !== '/';
+  const isVisible = pathname   !== '/';
   const id = match.params.itemId;
 
   const selectedItem = filterById(data,id);
 
   return (
-    <SidebarWrapper isVisible={isVisible}>
+    <SidebarWrapper isvisible={isVisible.toString()}>
       <SidebarClose />
       <SidebarContent>
         <Switch>
@@ -40,6 +41,10 @@ const Sidebar = (p) => {
           <Route
             path="/liste"
             render={() => <SidebarList data={data} />}
+          />
+          <Route
+            path="/info"
+            render={() => <SidebarInfo />}
           />
         </Switch>
       </SidebarContent>
