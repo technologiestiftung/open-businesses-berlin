@@ -6,7 +6,7 @@ export default {
     mapZoom: [10],
     marker: {
       color: {
-        selected: 'red',
+        selected: 'green',
         default: 'black',
       }
     },
@@ -76,6 +76,16 @@ export default {
       id: "adresse",
       component: "description",
       label: "Adresse",
+    },
+    {
+      id: "angebote",
+      component: "tags",
+      label: "Angebote",
+    },
+    {
+      id: "zielgruppe_themenspezifisch",
+      component: "tags",
+      label: "Zielgruppen",
     },
   ],
 };

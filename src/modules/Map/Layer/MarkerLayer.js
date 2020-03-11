@@ -30,6 +30,8 @@ const MarkerLayer = (p) => {
   function getPaintProps(highlightData) {
     const itemId = idx(highlightData, _ => _.properties.autoid) || '';
     const activeExpr = ['case', ['==', ['string', ['get', 'autoid']], itemId], 12, 6] || '';
+    const markerColors = c.map.marker.color;
+
     return {
       'circle-radius': [
         'interpolate', ['linear'], ['zoom'],
@@ -37,8 +39,8 @@ const MarkerLayer = (p) => {
       ],
       'circle-color': [
         'case',
-        ['==', ['string', ['get', 'autoid']], itemId], 'red',
-        'black'
+        ['==', ['string', ['get', 'autoid']], itemId], markerColors.selected,
+        markerColors.default
       ],
       'circle-stroke-width': [
         'case',

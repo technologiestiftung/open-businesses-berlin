@@ -5,6 +5,7 @@ import React from 'react';
 
 import CardTitle from './CardTitle';
 import CardLink from './CardLink';
+import CardTags from './CardTags';
 import CardDescription from './CardDescription';
 
 export default p => {
@@ -38,6 +39,15 @@ export default p => {
                 label={block.label}
                 content={data.properties[block.id]}
                 url={data.properties[block.id]}
+              />
+            )
+          case 'tags':
+            return (
+              <CardTags
+                ismail="true"
+                key={`card-link-key-${i}`}
+                label={block.label}
+                tags={data.properties[block.id]}
               />
             )
           default:
