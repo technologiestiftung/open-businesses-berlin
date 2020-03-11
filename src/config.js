@@ -4,6 +4,12 @@ export default {
   map: {
     mapCenter: [13.4124999, 52.5040961],
     mapZoom: [10],
+    marker: {
+      color: {
+        selected: 'red',
+        default: 'black',
+      }
+    },
     config: {
       minZoom: 6,
       maxZoom: 17,

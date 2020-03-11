@@ -13,12 +13,6 @@ const App = (p) => {
   const data = useStoreState(state => state.data);
   const highlightData = useStoreState(state => state.highlightData);
 
-  history.listen(location => updateLocation(location));
-
-  const updateLocation = location => {
-    console.log('location updated', highlightData)
-  }
-
   useEffect(() => {
     loadData();
   }, []);
