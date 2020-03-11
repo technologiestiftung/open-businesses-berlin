@@ -1,12 +1,44 @@
 # tsb-react-map-boilerplate
 
-Add a ```.env``` file with your mapbox token and style credentials in the root directory.
+> This project serves as a template to plot spatial data on a map.
+
+### Getting started
+
+Add a ```.env``` file with your mapbox token and style credentials in the root directory. Register at mapbox to get an access token.
 
 ```
 REACT_APP_MAP_TOKEN={{MAPBOX_TOKEN}}
 REACT_APP_MAP_STYLE={{MAPBOX_STYLE_URL}}
 NODE_PATH=src/
 ```
+
+### detail
+> The detail section represents the cards for individual selected points on the sidebar.
+id: This should be the name of the to be avaiable key inside the properties section of each feature inside your geojson.
+component: This defines which React component is responsible to render the data of the ```id``` key. Have a look at the set of components that is currently available.
+label: This content defines what label should be displayed above the data.
+
+#### Available Components
+- tags -> expects the data to be an **array of strings**
+- title -> expects the data to be a **string**
+- description -> expects the data to be a **string**
+- link -> expects the data to be a **string**
+
+```
+  detail: [
+    {
+      id: "name",
+      component: "title",
+      label: "Institution",
+    }
+  ]
+```
+
+
+
+
+
+
 
 Available Content types:
 

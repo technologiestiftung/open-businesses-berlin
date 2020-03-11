@@ -5,8 +5,7 @@ import CardLabel from '../CardLabel';
 import CardTag from './CardTag';
 
 export default p => {
-  const { url, tags, label, ismail } = p;
-  const directTo = ismail ? `mailto:${url}` : url;
+  const { tags, label } = p;
   return (
     <div
         {...p}
