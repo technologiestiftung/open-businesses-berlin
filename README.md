@@ -2,7 +2,7 @@
 
 > This project serves as a template to plot spatial data on a map.
 
-### Getting started
+## Getting started
 
 Add a ```.env``` file with your mapbox token and style credentials in the root directory. Register at mapbox to get an access token.
 
@@ -12,14 +12,21 @@ REACT_APP_MAP_STYLE={{MAPBOX_STYLE_URL}}
 NODE_PATH=src/
 ```
 
-### detail
-> The detail section represents the cards for individual selected points on the sidebar.
+## How to setup the project
 
-id: This should be the name of the to be avaiable key inside the properties section of each feature inside your geojson.
-component: This defines which React component is responsible to render the data of the ```id``` key. Have a look at the set of components that is currently available.
-label: This content defines what label should be displayed above the data.
+Inside the root directory is a ```config.js``` located which defines *what* and *how* properties of your geojson are displayed. Further more it sets default values for setting up the map. 
 
-#### Available Components
+It is required to define what data is displayed:
+1. Inside the **tooltip** (when hovering above an item on the map)
+2. Inside the **detail** Section of the sidebar (which provides a more default view on available data of the selected item)
+3. On the **about** section of the sidebar (which provides additional information about the project)
+
+### tooltip & detail
+id -> Name of the key inside properties of each feature.
+component -> React component that is rendered.
+label -> Label that is displayed above the data.
+
+#### Available components
 - tags -> expects the data to be an **array of strings**
 - title -> expects the data to be a **string**
 - description -> expects the data to be a **string**
@@ -33,6 +40,25 @@ label: This content defines what label should be displayed above the data.
       label: "Institution",
     }
   ]
+```
+
+### about
+...
+
+```
+  about: {
+    title: "Name des Projekts hier",
+    paragraphs: [
+      {
+        title: "Subheadline hier",
+        content: "Lorem ipsum [dolorem](https://www.google.de) est.",
+      },
+      {
+        title: "Subheadline hier",
+        content: "Lorem ipsum [dolorem](https://www.google.de) est.",
+      },
+    ]
+  },
 ```
 
 
