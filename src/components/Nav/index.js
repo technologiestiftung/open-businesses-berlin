@@ -40,7 +40,6 @@ const NavItem = styled(NavLink)`
 const navConfig = [
   { path: "/liste", title: "Listenansicht", icon: <ListIcon /> },
   { path: "/info", title: "Über das Projekt", icon: <InfoIcon /> },
-  { path: "/filter", title: "Suche und Filter", icon: <SearchIcon /> },
 ];
 
 const Nav = (p) => {

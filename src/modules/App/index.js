@@ -15,6 +15,11 @@ const App = (p) => {
 
   useEffect(() => {
     loadData();
+
+    setTimeout(() => {
+      history.push('/info');
+    }, 250);
+  
   }, []);
 
   return (
