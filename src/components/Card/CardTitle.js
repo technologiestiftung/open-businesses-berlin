@@ -8,7 +8,7 @@ export default p => {
   const padding = size === 'responsive' ? [3,4,5] : 1;
   const width = size === 'responsive' ? '70%' : '100%';
   return (
-    <div
+    <h3
       {...p}
       sx={{
         fontSize: fontSize,
@@ -16,9 +16,10 @@ export default p => {
         lineHeight: ['heading'],
         color: [fontColor],
         paddingBottom: padding,
+        my: '0',
         width: width,
         transition: theme => theme.transitions[0],
       }}
-    ></div>
+    ></h3>
   )
 }

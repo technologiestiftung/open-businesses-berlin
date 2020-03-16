@@ -21,6 +21,7 @@ const MarkerLayer = (p) => {
   const setHighlightData = useStoreActions(a => a.setHighlightData);
   const highlightData = useStoreState(a => a.highlightData);
   const paintProps = getPaintProps(highlightData);
+  const legendType = c.about.legend.id;
 
   const handleMouseEnter = (evt, { properties = {} }) => {
     evt.map.getCanvas().style.cursor = "pointer";
@@ -37,23 +38,15 @@ const MarkerLayer = (p) => {
         'interpolate', ['linear'], ['zoom'],
         8, activeExpr,
       ],
-      'circle-color': [
-        'case',
-        ['==', ['string', ['get', 'autoid']], itemId], markerColors.selected,
-        markerColors.default
-      ],
+      'circle-color': 
+        ['get', 'color']
+      ,
       'circle-stroke-width': [
         'case',
         ['==', ['string', ['get', 'autoid']], itemId], 12,
         4
       ],
       'circle-stroke-color': 'white'
-      //   'case',
-      //   ['==', ['string', ['get', 'name']], detailId], 
-      //   ['get', 'color'],
-      //   ['get', 'isFiltered'], '#E8E8E8',
-      //   ['get', 'colorLight']
-      // ],
     };
   };
 

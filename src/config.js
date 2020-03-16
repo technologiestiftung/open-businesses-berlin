@@ -27,6 +27,9 @@ export default {
     title: "Map title here!",
   },
   about: {
+    legend: {
+      id: 'art_angebot'
+    },
     title: "Name des Projekts hier",
     paragraphs: [
       {
