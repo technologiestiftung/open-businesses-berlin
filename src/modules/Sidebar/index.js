@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Route, withRouter, Switch } from "react-router-dom";
 
 import SidebarInfo from "./SidebarInfo/";
+import SidebarFilter from "./SidebarFilter/";
 import SidebarList from "./SidebarList/";
 import SidebarClose from "./SidebarClose/";
 import Card from "components/Card/Card";
@@ -39,6 +40,10 @@ const Sidebar = (p) => {
           <Route
             path="/info"
             render={() => <SidebarInfo />}
+          />
+          <Route
+            path="/suche"
+            render={() => <SidebarFilter />}
           />
         </Switch>
       </SidebarContent>

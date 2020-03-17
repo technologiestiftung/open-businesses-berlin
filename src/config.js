@@ -23,9 +23,6 @@ export default {
       style: process.env.REACT_APP_MAP_STYLE,
     },
   },
-  meta: {
-    title: "Map title here!",
-  },
   about: {
     legend: {
       id: 'art_angebot'
@@ -39,6 +36,21 @@ export default {
       {
         title: "Subheadline hier",
         content: "Lorem ipsum [dolorem](https://www.google.de) est. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      },
+    ]
+  },
+  filter: {
+    title: 'Filter und Suche',
+    filter: [
+      {
+        id: "zielgruppe_themenspezifisch",
+        component: "tags",
+        label: "Zielgruppe Themenspezifisch"
+      },
+      {
+        id: "angebote",
+        component: "tags",
+        label: "Angebote"
       },
     ]
   },
