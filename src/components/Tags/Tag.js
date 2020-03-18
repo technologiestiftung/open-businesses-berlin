@@ -1,26 +1,31 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import React from "react";
-import {useStoreActions} from 'easy-peasy';
+import React, {useState} from "react";
+import {useStoreActions,useStoreState} from 'easy-peasy';
 
 export default p => {
   const {data,id} = p;
   const setFilter = useStoreActions(actions => actions.setFilter);
+  const isFilteredState = useStoreState(state => state.isFiltered);
+  const [isFiltered, setIsFiltered] = useState(isFilteredState[id][data])
 
   const handleClick = (obj) => {
     setFilter(obj)
+    setIsFiltered(isFilteredState[id][data]);
   }
 
   return (
     <span
       sx={{
-        backgroundColor: 'text',
-        color: 'background',
+        backgroundColor: isFiltered ? 'background' : 'text',
+        color: isFiltered ? 'text' : 'background',
+        border: isFiltered ? '1px solid black' : '1px solid white',
         py: '1',
         px: '3',
         mr: '2',
         mb: '2',
-        borderRadius: '12px',
+        borderRadius: '14px',
+        transition: t => t.transitions[1],
       }}
       onClick={() => handleClick({data, id})}
     >{data}</span>

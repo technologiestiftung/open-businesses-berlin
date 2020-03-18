@@ -6,11 +6,11 @@ import c from 'config';
 
 import history from '../../../history';
 
-const paintProps = {
-  "circle-radius": 10,
-  "circle-color": "#223b53",
+const paintPropsDefault = {
+  "circle-radius": 6,
+  "circle-color": "#D4D4D4",
   "circle-stroke-color": "white",
-  "circle-stroke-width": 1,
+  "circle-stroke-width": 4,
   "circle-opacity": 1,
 };
 
@@ -86,12 +86,22 @@ const MarkerLayer = (p) => {
   return (
     <Fragment>
       <Layer
+        id="MarkerLayerData"
+        type="circle"
+        paint={paintPropsDefault}
+        onMouseMove={(evt) => handleMouseMove(evt)}
+      >
+        { data.features.map((feat, i) => renderFeat(feat, i)) }
+        {/* {data.features.filter(d => !d.properties.filtered).map(feat => renderFeat(feat))} */}
+      </Layer>
+      <Layer
         id="MarkerLayer"
         type="circle"
         paint={paintProps}
         onMouseMove={(evt) => handleMouseMove(evt)}
       >
-        { data.features.map((feat, i) => renderFeat(feat, i)) }
+        {/* { data.features.map((feat, i) => renderFeat(feat, i)) } */}
+        {data.features.filter(d => !d.properties.filtered).map(feat => renderFeat(feat))}
       </Layer>
     </Fragment>
   );

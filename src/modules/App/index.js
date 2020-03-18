@@ -10,8 +10,6 @@ const NotFoundRoute = () => <Redirect to="/" />;
 
 const App = (p) => {
   const loadData = useStoreActions((action) => action.loadData);
-  const data = useStoreState(state => state.data);
-  const highlightData = useStoreState(state => state.highlightData);
 
   useEffect(() => {
     loadData();

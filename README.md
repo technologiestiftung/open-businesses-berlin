@@ -9,7 +9,6 @@ Add a ```.env``` file with your mapbox token and style credentials in the root d
 ```
 REACT_APP_MAP_TOKEN={{MAPBOX_TOKEN}}
 REACT_APP_MAP_STYLE={{MAPBOX_STYLE_URL}}
-NODE_PATH=src/
 ```
 
 ## How to setup the project

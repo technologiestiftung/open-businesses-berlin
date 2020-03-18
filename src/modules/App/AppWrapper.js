@@ -1,12 +1,11 @@
 import React from "react";
 import { Box } from "rebass/styled-components";
 import styled, { createGlobalStyle } from "styled-components";
-import { ThemeProvider } from 'theme-ui'
+import { ThemeProvider } from "theme-ui";
 import GlobalStyle from "styles/GlobalStyle";
 import { withRouter, Route } from "react-router-dom";
 import Theme from "styles/Theme";
 import { useStoreState } from "easy-peasy";
-
 
 import Map from "modules/Map";
 import Sidebar from "modules/Sidebar";
@@ -24,6 +23,7 @@ const StyledWrapper = styled(Box)`
 const AppWrapper = () => {
   const isLoading = useStoreState((state) => state.isLoading);
   const data = useStoreState((state) => state.data);
+  const filteredData = useStoreState((state) => state.filteredData);
   const mapCenter = useStoreState((state) => state.mapCenter);
   const mapZoom = useStoreState((state) => state.mapZoom);
   const style = process.env.REACT_APP_MAP_STYLE;
@@ -34,14 +34,19 @@ const AppWrapper = () => {
       <DynamicGlobalStyle />
       <StyledWrapper>
         <LoadingOverlay loading={isLoading} />
-        <Route path={['/liste/:itemId','/liste', '/', '/info']} render={() => <Sidebar data={data} />} />
-        <Nav />
-        <Map
-          data={data}
-          mapCenter={mapCenter}
-          mapZoom={mapZoom}
-          style={style}
+        <Route
+          path={["/liste/:itemId", "/liste", "/", "/info"]}
+          render={() => <Sidebar data={data} />}
         />
+        <Nav />
+        {filteredData && (
+          <Map
+            data={filteredData}
+            mapCenter={mapCenter}
+            mapZoom={mapZoom}
+            style={style}
+          />
+        )}
       </StyledWrapper>
     </ThemeProvider>
   );
