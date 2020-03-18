@@ -16,7 +16,6 @@ const CardDescription = styled.div`
 export default p => {
   const { data, type, hasBorder } = p;
   const configTooltip = c.tooltip;
-
   const border = hasBorder ? '1px solid' : '0px solid';
 
   return (

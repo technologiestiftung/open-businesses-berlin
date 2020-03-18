@@ -5,6 +5,7 @@ import { Route, withRouter, Switch } from "react-router-dom";
 import SidebarInfo from "./SidebarInfo/";
 import SidebarFilter from "./SidebarFilter/";
 import SidebarList from "./SidebarList/";
+import SidebarFav from "./SidebarFav/";
 import SidebarClose from "./SidebarClose/";
 import Card from "components/Card/Card";
 import SidebarWrapper from './SidebarWrapper';
@@ -31,7 +32,11 @@ const Sidebar = (p) => {
         <Switch>
           <Route
             path="/liste/:itemId"
-            render={() => <Card data={selectedItem} />}
+            render={() => {
+              if (selectedItem) {
+                return <Card data={selectedItem}/>
+              }
+            }}
           />
           <Route
             path="/liste"
@@ -40,6 +45,10 @@ const Sidebar = (p) => {
           <Route
             path="/info"
             render={() => <SidebarInfo />}
+          />
+          <Route
+            path="/favoriten"
+            render={() => <SidebarFav data={data} />}
           />
           <Route
             path="/suche"

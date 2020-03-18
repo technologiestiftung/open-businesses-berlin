@@ -13,11 +13,11 @@ export default p => {
       sx={{
         fontSize: fontSize,
         fontFamily: ['heading'],
-        lineHeight: ['heading'],
+        lineHeight: ['120%'],
         color: [fontColor],
         paddingBottom: padding,
         my: '0',
-        width: width,
+        width: '80%',
         transition: theme => theme.transitions[0],
       }}
     ></h3>

@@ -23,6 +23,7 @@ export default p => {
         py: '1',
         px: '3',
         mr: '2',
+        cursor: 'pointer',
         mb: '2',
         borderRadius: '14px',
         transition: t => t.transitions[1],

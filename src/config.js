@@ -39,6 +39,9 @@ export default {
       },
     ]
   },
+  fav: {
+    title: 'Favoriten'
+  },
   filter: {
     title: 'Filter und Suche',
     filter: [

@@ -23,6 +23,7 @@ const DataModel = {
       const data = await response.json();
       data.features.map((feat) => {
         feat.properties.autoid = id();
+        feat.properties.isFaved = false;
       });
       actions.loadDataSuccess(data);
     } catch (_) {

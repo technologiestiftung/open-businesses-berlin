@@ -4,6 +4,7 @@ import TooltipModel from "./TooltipModel";
 import TagsModel from "./TagsModel";
 import FilterModel from "./FilterModel";
 import LegendModel from "./LegendModel";
+import FavModel from "./FavModel";
 
 export default {
   ...MapModel,
@@ -11,5 +12,6 @@ export default {
   ...TagsModel,
   ...FilterModel,
   ...LegendModel,
+  ...FavModel,
   ...TooltipModel,
 };

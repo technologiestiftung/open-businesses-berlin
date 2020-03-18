@@ -28,6 +28,8 @@ const AppWrapper = () => {
   const mapZoom = useStoreState((state) => state.mapZoom);
   const style = process.env.REACT_APP_MAP_STYLE;
 
+  console.log(filteredData)
+
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
@@ -36,7 +38,7 @@ const AppWrapper = () => {
         <LoadingOverlay loading={isLoading} />
         <Route
           path={["/liste/:itemId", "/liste", "/", "/info"]}
-          render={() => <Sidebar data={data} />}
+          render={() => <Sidebar data={filteredData} />}
         />
         <Nav />
         {filteredData && (
