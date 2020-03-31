@@ -8,6 +8,7 @@ import CardTitle from "./CardTitle";
 import CardLink from "./CardLink";
 import CardTags from "./CardTags";
 import CardDescription from "./CardDescription";
+import CardOpeningHours from "./CardOpeningHours";
 import Toggle from 'components/Toggle';
 
 export default (p) => {
@@ -41,6 +42,14 @@ export default (p) => {
               case "description":
                 return (
                   <CardDescription
+                    key={`card-desc-key-${i}`}
+                    label={block.label}
+                    content={properties[block.id]}
+                  />
+                );
+              case "openingHours":
+                return (
+                  <CardOpeningHours
                     key={`card-desc-key-${i}`}
                     label={block.label}
                     content={properties[block.id]}

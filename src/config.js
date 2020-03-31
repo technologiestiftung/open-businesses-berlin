@@ -59,9 +59,9 @@ export default {
       label: "Institution",
     },
     {
-      id: "art_angebot",
+      id: "art_geschaeft",
       component: "description",
-      label: "Angebot",
+      label: "geschaeft",
     }
   ],
   detail: [
@@ -79,6 +79,11 @@ export default {
       id: "email",
       component: "link",
       label: "E-Mail",
+    },
+    {
+      id: "oeffnungszeiten",
+      component: "openingHours",
+      label: "Öffnungszeiten",
     },
     {
       id: "adresse",

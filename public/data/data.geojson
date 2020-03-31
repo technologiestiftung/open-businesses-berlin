@@ -1,38 +1,61 @@
 {
-	"type": "FeatureCollection",
-	"features": [{
-		"type": "Feature",
-		"geometry": {   
-			"type": "Point",
-			"coordinates": [
-				13.573796,
-				52.444947
-			]
-		},
-		"properties": {
-			"name": "Kikko Sushi",
-			"art_geschaeft": "Restaurant",
-			"art_angebot": "Sushi",
-			"link": "",
-			"telefon": "+493074398227",
-			"email": "",
-			"adresse": "Alt-Köpenick 36, 12555 Berlin",
-			"strasse": "Alt-Köpenick 36",
-			"plz": "12555",
-			"stadt": "Berlin",
-            "lieferung_status": "Ja",
-		    "lieferung_beschreibung": "Wir liefern",
-            "abholung_status": "Nein",
-		    "abholung_beschreibung": "Keine Selbstabholung möglich",
-			"oeffnungszeiten_obj": [{
-				"montag": "8:00-20:00",
-				"dienstag": "8:00-20:00",
-				"mittwoch": "8:00-20:00",
-				"donnerstag": "8:00-20:00",
-				"freitag": "8:00-20:00",
-				"samstag": "8:00-20:00",
-				"sonntag": "8:00-20:00"
-			}]
-		}
-	}]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.573796,
+          52.444947
+        ]
+      },
+      "properties": {
+        "name": "Kikko Sushi",
+        "art_geschaeft": "Restaurant",
+        "art_angebot": "Sushi",
+        "link": "",
+        "telefon": "+493074398227",
+        "email": "",
+        "adresse": "Alt-Köpenick 36, 12555 Berlin",
+        "strasse": "Alt-Köpenick 36",
+        "plz": "12555",
+        "stadt": "Berlin",
+        "lieferung_status": "Ja",
+        "lieferung_beschreibung": "Wir liefern",
+        "abholung_status": "Nein",
+        "abholung_beschreibung": "Keine Selbstabholung möglich",
+        "oeffnungszeiten": [
+          {
+            "day": "Montag",
+            "hours": "08:00-20:00"
+          },
+          {
+            "day": "Dienstag",
+            "hours": "08:00-20:00"
+          },
+          {
+            "day": "Mittwoch",
+            "hours": "08:00-20:00"
+          },
+          {
+            "day": "Donnerstag",
+            "hours": "08:00-20:00"
+          },
+          {
+            "day": "Freitag",
+            "hours": "08:00-20:00"
+          },
+          {
+            "day": "Samstag",
+            "hours": "08:00-20:00"
+          },
+          {
+            "day": "Sonntag",
+            "hours": "08:00-20:00"
+          }
+        ]
+      }
+    }
+  ]
 }

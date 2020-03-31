@@ -28,8 +28,6 @@ const AppWrapper = () => {
   const mapZoom = useStoreState((state) => state.mapZoom);
   const style = process.env.REACT_APP_MAP_STYLE;
 
-  console.log(filteredData)
-
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />

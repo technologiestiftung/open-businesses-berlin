@@ -12,10 +12,14 @@ const LegendModel = {
       let legendColorCodes = [];
       const color = scaleOrdinal(schemePaired);
 
+      console.log(target)
+
       const categories = payload.features.forEach((feature, i) => {
         const { properties } = feature;
 
         const val = feature.properties[legendType];
+
+
         if (!legendArr.includes(val)) {
           legendArr.push(val);
           legendColorCodes.push({ id: val, color: color(i), count: 1 });

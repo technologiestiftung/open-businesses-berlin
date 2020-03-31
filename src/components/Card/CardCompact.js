@@ -35,7 +35,7 @@ const CardCompact = (p) => {
   const isTooltip = type === "white";
 
   const handleClick = (evt, data) => {
-    console.log('click')
+    console.log("click");
     const { properties } = data;
     const nextLocation = `/liste/${properties.autoid}`;
     setHighlightData(data);
@@ -52,11 +52,8 @@ const CardCompact = (p) => {
           type="list"
         />
       )}
-      <div           onClick={(evt) => handleClick(evt, data)}>
-      <CardHeader
-        hasBorder={true}
-        data={properties}
-      />
+      <div onClick={(evt) => handleClick(evt, data)}>
+        <CardHeader hasBorder={true} data={properties} />
       </div>
     </StyledCardWrapper>
   );

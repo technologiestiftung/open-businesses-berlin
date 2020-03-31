@@ -9,9 +9,9 @@ import FavModel from "./FavModel";
 export default {
   ...MapModel,
   ...DataModel,
+  ...LegendModel,
   ...TagsModel,
   ...FilterModel,
-  ...LegendModel,
   ...FavModel,
   ...TooltipModel,
 };
