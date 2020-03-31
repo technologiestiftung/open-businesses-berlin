@@ -25,7 +25,7 @@ export default {
   },
   about: {
     legend: {
-      id: 'art_angebot'
+      id: "art_geschaeft"
     },
     title: "Name des Projekts hier",
     paragraphs: [
@@ -46,15 +46,10 @@ export default {
     title: 'Filter und Suche',
     filter: [
       {
-        id: "zielgruppe_themenspezifisch",
+        id: "plz",
         component: "tags",
-        label: "Zielgruppe Themenspezifisch"
-      },
-      {
-        id: "angebote",
-        component: "tags",
-        label: "Angebote"
-      },
+        label: "PLZ"
+      }
     ]
   },
   tooltip: [
@@ -81,11 +76,6 @@ export default {
       label: "Angebot",
     },
     {
-      id: "bezeichnung",
-      component: "description",
-      label: "Bezeichnung",
-    },
-    {
       id: "email",
       component: "link",
       label: "E-Mail",
@@ -96,14 +86,24 @@ export default {
       label: "Adresse",
     },
     {
-      id: "angebote",
-      component: "tags",
-      label: "Angebote",
+      id: "lieferung_status",
+      component: "description",
+      label: "Lieferung?",
     },
     {
-      id: "zielgruppe_themenspezifisch",
-      component: "tags",
-      label: "Zielgruppen",
+      id: "lieferung_beschreibung",
+      component: "description",
+      label: "Beschreibung des Lieferungangebots",
     },
+    {
+      id: "abholung_status",
+      component: "description",
+      label: "Selbstabholung?",
+    },
+    {
+      id: "abholung_beschreibung",
+      component: "description",
+      label: "Beschreibung des Angebots zum Selbstabholung",
+    }
   ],
 };
